@@ -10,13 +10,6 @@
         </h4>
     </div>
     <div class="card-body">
-        @php
-            $meesage = 'Error brand name?';
-        @endphp
-
-        <x-example :message="$meesage" class="fw-bolder" type="danger">
-
-        </x-example>
 
         <table class="table table-sm table-striped table-hover table-bordered">
             <thead>
@@ -58,7 +51,6 @@
             </tbody>
         </table>
 
-        {{ $brands->onEachSide(2)->links() }}
 
     </div>
 

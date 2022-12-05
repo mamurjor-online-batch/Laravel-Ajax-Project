@@ -12,15 +12,6 @@
     <div class="card-body">
         @include('backend.include.alert')
 
-        @php
-            $class = 'alert alert-danger';
-        @endphp
-
-        <x-product :class="$class" type="fw-bold"/>
-        <x-brand>
-            I am a web developer
-        </x-brand>
-
         <table class="table table-sm table-striped table-hover table-bordered">
             <thead>
                 <th>SL</th>

@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests\BrandRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
+use Illuminate\Support\Facades\Cache;
 
 class BrandController extends Controller
 {
     public function index(){
-        $brands = Brand::paginate(15);
+
+        $brands = Brand::get_brands();
+        
         return view('backend.brand.index',['brands'=>$brands]);
     }
 
